@@ -16,7 +16,7 @@ class Stopwatch{
         }
  */
             if (!this.time) {
-            this.time = setInterval(this.runningTime, 100);
+            this.time = setInterval(this.runningTime, 1000);
         } else {
             console.log("A timer has already been started.")
         }
@@ -35,20 +35,18 @@ class Stopwatch{
     }
 
     end (){
-        
+        this.time = clearInterval(this.time)
+        console.log("Your timer has been set back to 0")
     }
 
     reset() {
         this.time = clearInterval(this.time)
-        console.log("Your timer has been set back to" + this.time)
+        console.log("Your timer has been set back to 0")
     }
 
-    pause(){
-
-    }
 
     showTime(){
-        console.log("The timer is at " + this.time);
+        console.log("The timer is at " + this.runningTime);
     }
 }
 let timer = new Stopwatch();
