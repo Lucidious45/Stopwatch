@@ -43,7 +43,7 @@ class Stopwatch{
     }
 
     timerCycle() {
-        if (stoptime == false) {
+        /* if (stoptime == false) {
         sec = parseInt(sec);
         min = parseInt(min);
         hr = parseInt(hr);
@@ -70,10 +70,11 @@ class Stopwatch{
           hr = '0' + hr;
         }
     
-        timer.innerHTML = hr + ':' + min + ':' + sec;
+        timer.innerHTML = hr + ':' + min + ':' + sec; */
+        this.time = setInterval(this.runningTime, 100);
     
-        setTimeout("timerCycle()", 1000);
-      }
+    
+      
     }
 
     reset() {
@@ -87,3 +88,4 @@ class Stopwatch{
     }
 }
 let timer = new Stopwatch();
+
